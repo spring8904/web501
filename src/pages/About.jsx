@@ -1,13 +1,17 @@
+import { Alert, Container } from 'react-bootstrap'
+
 const About = () => {
   return (
-    <div className="container alert alert-success">
-      <div>
-        <span className="fw-bold">Ho ten: </span>Nguyen Xuan Lam
-      </div>
-      <div>
-        <span className="fw-bold">MSV: </span>PH45877
-      </div>
-    </div>
+    <Container>
+      <Alert variant="success">
+        <div>
+          <span className="fw-bold">Ho ten: </span>Nguyen Xuan Lam
+        </div>
+        <div>
+          <span className="fw-bold">MSV: </span>PH45877
+        </div>
+      </Alert>
+    </Container>
   )
 }
 
