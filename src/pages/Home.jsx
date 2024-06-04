@@ -33,7 +33,11 @@ const Home = () => {
                   <Card.Img
                     variant="top"
                     src={product.thumbnail}
-                    style={{ height: '200px', width: '100%' }}
+                    style={{
+                      height: '200px',
+                      width: '100%',
+                      objectFit: 'contain',
+                    }}
                     alt=""
                   />
                 </Link>

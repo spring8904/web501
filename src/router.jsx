@@ -3,6 +3,8 @@ import Layout from './Layout'
 import { About, Dashboard, ErrorPage, Home, ProductDetail } from './pages'
 import AddProduct from './pages/admin/product/AddProduct'
 import EditProduct from './pages/admin/product/EditProduct'
+import Login from './pages/Login'
+import Register from './pages/Register'
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,14 @@ const router = createBrowserRouter([
       {
         path: '/dashboard/edit-product/:id',
         element: <EditProduct />,
+      },
+      {
+        path: '/login',
+        element: <Login />,
+      },
+      {
+        path: 'register',
+        element: <Register />,
       },
     ],
   },
