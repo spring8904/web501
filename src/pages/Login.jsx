@@ -12,6 +12,8 @@ const productSchema = z.object({
 })
 
 const Login = () => {
+  localStorage.removeItem('user')
+
   const {
     register,
     handleSubmit,
@@ -24,7 +26,11 @@ const Login = () => {
     try {
       const res = await userServices.login(data)
       if (res) {
-        localStorage.setItem('accessToken', res.accessToken)
+        const data = {
+          ...res.user,
+          accessToken: res.accessToken,
+        }
+        localStorage.setItem('user', JSON.stringify(data))
         navigate('/')
       }
     } catch (error) {

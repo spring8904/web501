@@ -1,7 +1,16 @@
 import { Container, Nav, NavDropdown, Navbar } from 'react-bootstrap'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 const Header = () => {
+  const user = localStorage.getItem('user')
+  const navigate = useNavigate()
+
+  const logout = () => {
+    localStorage.removeItem('user')
+    navigate('/login')
+    toast.success('Logout success')
+  }
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
@@ -27,13 +36,19 @@ const Header = () => {
               Dashboard
             </NavLink>
             <NavDropdown title="Auth">
-              <Link to="/register" className="dropdown-item">
-                Register
-              </Link>
-              <NavDropdown.Divider />
-              <Link to="/login" className="dropdown-item">
-                Login
-              </Link>
+              {!user ? (
+                <>
+                  <Link to="/login" className="dropdown-item">
+                    Login
+                  </Link>
+                  <NavDropdown.Divider />
+                  <Link to="/register" className="dropdown-item">
+                    Register
+                  </Link>
+                </>
+              ) : (
+                <NavDropdown.Item onClick={logout}>Log out</NavDropdown.Item>
+              )}
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

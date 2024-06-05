@@ -12,6 +12,8 @@ const productSchema = z.object({
 })
 
 const Register = () => {
+  localStorage.removeItem('user')
+
   const {
     register,
     handleSubmit,
