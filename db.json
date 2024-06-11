@@ -1,11 +1,5 @@
 {
-  "users": [
-    {
-      "email": "lamnxph45877@fpt.edu.vn",
-      "password": "$2a$10$ak1IVYPa6UZiAyIQrCY3q.sYKdTqP9aBWeLcAUBux2zLXf8uwWZQ2",
-      "id": 1
-    }
-  ],
+  "users": [],
   "products": [
     {
       "id": 1,
@@ -55,9 +49,7 @@
       "brand": "Samsung",
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/3/1.jpg"
-      ]
+      "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
     },
     {
       "id": 4,

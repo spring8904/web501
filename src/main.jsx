@@ -1,10 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { RouterProvider } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import router from './router'
+
+const router = createBrowserRouter([{ path: '/', element: <div>Home</div> }])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
